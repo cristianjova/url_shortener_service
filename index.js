@@ -1,9 +1,13 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 // Init app
 const app = express();
 
-// Acepting json data to API
+// Connect to database
+connectDB();
+
+// Acepting json data into our API
 app.use(express.json({ extended: false }));
 
 const PORT = process.env.PORT || 5000;
