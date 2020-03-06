@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Url Shortener Service</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="x-large text-center text-secondary">Url Shortener Service</h1>
+      <section class="info p-1">
+        <ol>
+          <li class="lead">
+            Enviar una solicitud <strong>POST</strong> con la url a
+            <code>[project_url]/api/shorturl/new</code> y recibe un JSON con la
+            url acortada. Ejemplo {"original_url": "www.google.com",
+            "short_url":1}
+          </li>
+          <li class="lead">
+            Si se envia una url que no sigue el formato
+            <code>http(s)://www.example.com(/more/routes)</code> devuelve un JSON con un
+            error. Ejemplo {"error":"invalid URL"}
+          </li>
+        </ol>
+      </section>
+      <section class="form my-2 p-2">
+        <h2 class="text-center large my-1 text-light">
+          Creación de url corta
+        </h2>
+        <form action="/api/shorturl/new" method="POST">
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Ingrese url que desea acortar"
+              name="originalUrl"
+              required
+            />
+          </div>
+          <input class="btn btn-secondary" type="submit" value="Acortar" />
+        </form>
+      </section>
+      <section class="example p-1">
+        <div class="input my-1">
+          <h2 class="text-center text-secondary">Ejemplo de uso</h2>
+          <a href="/api/shorturl/__JHzw72" target="_blank"
+            >[this_project_url]/api/shorturl/__JHzw72</a
+          >
+        </div>
+        <div class="output">
+          <h2 class="text-center text-secondary">Te redirige a:</h2>
+          <a href="https://www.freecodecamp.org/forum/" target="_blank"
+            >https://www.freecodecamp.org/forum/</a
+          >
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

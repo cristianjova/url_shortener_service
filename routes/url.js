@@ -7,12 +7,11 @@ const config = require('config');
 // Import model
 const Url = require('../models/Url');
 
-// @route POST  /api/url/shorten
+// @route POST  /api/shorturl/new
 // desc   Create short url
 router.post('/new', async (req, res) => {
   const { originalUrl } = req.body;
   const baseUrl = config.get('baseUrl');
-
   if (!validUrl.isUri(baseUrl)) {
     return res.status(401).json('Invalid base url');
   }

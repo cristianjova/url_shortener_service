@@ -1,8 +1,15 @@
 const express = require('express');
+const path = require('path');
 const router = express.Router();
 
 // Import model
 const Url = require('../models/Url');
+
+// @route GET /
+// desc   Show index page
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // @route   GET /:code
 // desc     Redirect to long/original url
