@@ -2,3 +2,6 @@ node_modules
 
 # Rest client
 requests
+
+# Files config
+config
