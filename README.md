@@ -15,4 +15,4 @@ url shortener service made for fcc certificacion
 
 ## Authors
 
-- **Jovanovich Cristian** - [JovaCM](https://github)
+- **Jovanovich Cristian** - [JovaCM](https://github/cristianjova)
